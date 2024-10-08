@@ -3,85 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Mohanbabu Mani | Resume</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
             color: #333;
         }
-        p {
-            color: #666;
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
-        ul {
-            list-style: none;
+        section {
+            padding: 20px;
+            margin: 10px;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        .skills-list, .projects-list, .experience-list {
+            list-style-type: none;
             padding: 0;
         }
-        li {
-            margin-bottom: 5px;
+        .skills-list li, .projects-list li, .experience-list li {
+            background: #ddd;
+            margin: 5px 0;
+            padding: 10px;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>MOHANBABU MANI</h1>
-        </header>
-        <section>
-            <h2>MS Optical Sciences</h2>
-            <ul>
-                <li>Master of Science in Optical Sciences (Quantum Information Scicence and Engineering), University of Arizona, Current</li>
-                <li>Quantum Optics, Quantum Reservoir Computing.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Experience</h2>
-            <ul>
-                <li>
-                    <h3>Research Assistant</h3>
-                    <p>The University of Arizona | Tucson,Arizona |Jan 2024 - Present</p>
-                    <p>Involved as a team member in the research laboratory investigation on squeezed light experiments for Scalable
-                        open quantum systems.</p>
-                </li>
-                <li>
-                    <h3>Cybersecurity Analyst</h3>
-                    <p>PFSI Solutions Pvt Ltd. | Chennai,TN | Sep 2022 - Sep 2023</p>
-                    <p>Orchestrated end-to-end incident response efforts as a key member of the Security Operations Centre (SOC)
-                        team; mitigated 50+ security incidents, reducing average resolution time by 40%.</p>
-                </li>
-                <!-- Add more experience sections as needed -->
-            </ul>
-        </section>
-        <section>
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <h3>Quantum Reservoir Computing</h3>
-                    <p>Squeezed light experiments for Quantum Reservoir Computation in Scalable Open Quantum Systems.</p>
-                    <p>Technologies used: Quantum Optics, Quantum Information Science</p>
-                </li>
-                <!-- Add more project sections as needed -->
-            </ul>
-        </section>
-        <section>
-            <h2>Contact</h2>
-            <p>Email: mohanbabumani@arizona.edu</p>
-            <p>Phone: +15205656505</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/mohanbabu-mani-878568223/">MOHANBABU MANI</a></p>
-            <!-- Add more contact information as needed -->
-        </section>
-    </div>
+
+<header>
+    <h1>Mohanbabu Mani</h1>
+    <p>Email: <a href="mailto:mohanbabumani@arizona.edu" style="color:white;">mohanbabumani@arizona.edu</a> | 
+    LinkedIn: <a href="https://linkedin.com/in/mohanbabu-mani-878568223" style="color:white;">linkedin.com/in/mohanbabu-mani-878568223</a> | 
+    GitHub: <a href="https://mohanbabumani.github.io" style="color:white;">mohanbabumani.github.io</a></p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>I am a highly motivated researcher in Optical Sciences and a Physics graduate with an integrated M.Sc. Currently pursuing a Masters in Optical Sciences, specializing in Quantum Information Science and Engineering. Deeply passionate about Quantum Computing technologies and dedicated to research in this transformative field. Eager to contribute to advancements and collaborate with fellow enthusiasts.</p>
+</section>
+
+<section>
+    <h2>Education</h2>
+    <p><strong>MS Optical Sciences</strong>, The University of Arizona, Tucson, AZ <br> GPA: 4.0 <br> Relevant Courses: Quantum Optics, Photonic Integrated Circuits, Acoustics Driven Magnetic Resonance</p>
+    <p><strong>Integrated M.Sc. Physics</strong>, Pondicherry University, India <br> CGPA: 7.52 <br> Relevant Courses: Computational Physics, Laser Optics</p>
+</section>
+
+<section>
+    <h2>Experience</h2>
+    <ul class="experience-list">
+        <li><strong>Research Assistant</strong>, The University of Arizona <br> 
+            • Operated and managed Laser Doppler Vibrometer (LDV) for phononic and photonic device characterization.<br>
+            • Collaborated with Sandia National Labs on acoustoelectric quantum devices.
+        </li>
+        <li><strong>Cybersecurity Analyst</strong>, Positka FSI Solutions, Chennai, India <br>
+            • Led incident response, reducing resolution time by 40%.<br>
+            • Enhanced SIEM monitoring and developed security SOPs.
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Projects</h2>
+    <ul class="projects-list">
+        <li><strong>Phononic Device Characterization</strong> <br> 
+            • Characterized devices made from materials like Lithium Niobate on Silicon.
+        </li>
+        <li><strong>Quantum Reservoir Computing</strong> <br> 
+            • Optimized homodyne detectors for quantum optics experiments.
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li>Quantum Optics, Acousto-optomechanics, Open Quantum Systems</li>
+        <li>Python, COMSOL, MATLAB, GDS, SOLIDWORKS</li>
+        <li>SIEM Monitoring, Penetration Testing, Incident Response</li>
+        <li>Languages: English, French (DELF A1), German</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2024 Mohanbabu Mani | Contact: mohanbabumani@arizona.edu</p>
+</footer>
+
 </body>
 </html>
