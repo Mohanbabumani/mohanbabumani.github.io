@@ -3,143 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohanbabu Mani | Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-            margin: 10px;
-        }
-        h1, h2 {
-            color: #4CAF50;
-        }
-        .skills-list, .projects-list, .experience-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .skills-list li, .projects-list li, .experience-list li {
-            background: #ddd;
-            margin: 5px 0;
-            padding: 10px;
-        }
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+    <title>Mohanbabu Mani | Optical Sciences Researcher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
 
-    <header>
-        <h1 class="cool-name">Mohanbabu Mani</h1>
-        <p>Email: <a href="mailto:mohanbabumani@arizona.edu" style="color:white;">mohanbabumani@arizona.edu</a> | 
-        LinkedIn: <a href="https://linkedin.com/in/mohanbabu-mani-878568223" style="color:white;">linkedin.com/in/mohanbabu-mani-878568223</a> | 
-        GitHub: <a href="https://github.com/Mohanbabumani" style="color:white;">Mohanbabumani</a></p>
-    </header>
-    <style>
-        .cool-name {
-            font-size: 4em;
-            font-weight: bold;
-            background: linear-gradient(90deg, #ff6f61, #fcb045);
-            -webkit-background-clip: text;
-            color: transparent;
-            text-align: center;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            margin: 0;
-            padding: 20px 0;
-        }
-    </style>
-    <style>
-        @keyframes gradient-fade {
-            0% {
-                background-position: 0% 50%;
-            }
-            100% {
-                background-position: 100% 50%;
-            }
-        }
-    
-        .cool-name {
-            font-size: 4em;
-            font-weight: bold;
-            background: linear-gradient(90deg, #6198ff, #fcc245fd, #61ffca);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            color: transparent;
-            text-align: center;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            margin: 0;
-            padding: 20px 0;
-            animation: gradient-fade 5s ease-in-out infinite;
-        }
-    </style>
-    
+    <div class="background-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">MM</a>
+            <ul class="nav-menu">
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Mohanbabu Mani</h1>
+                <p class="hero-subtitle">PhD in Optical Sciences | Quantum Information Science and Engineering</p>
+                <div class="hero-contact">
+                    <a href="mailto:mohanbabumani@arizona.edu" title="Email"><i data-feather="mail"></i></a>
+                    <a href="tel:+15205656505" title="Phone"><i data-feather="phone"></i></a>
+                    <a href="https://linkedin.com/in/mohanbabu-mani-878568223" target="_blank" title="LinkedIn"><i data-feather="linkedin"></i></a>
+                    <a href="https://mohanbabumani.github.io" target="_blank" title="GitHub"><i data-feather="github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="content-section">
+            <h2 class="section-title">Education</h2>
+            <div class="card-container">
+                <div class="card reveal">
+                    <h3>PhD & MS in Optical Sciences</h3>
+                    <p class="card-subtitle">The University of Arizona, Tucson, AZ</p>
+                    <p><strong>Specialization:</strong> Quantum Information Science and Engineering</p>
+                    <p><strong>GPA:</strong> 3.769</p>
+                    <p class="courses"><strong>Courses:</strong> Interferometry, Quantum Optics, Photonic Integrated Circuits, RF MEMS devices</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Integrated M.Sc. in Physics</h3>
+                    <p class="card-subtitle">Pondicherry University, India</p>
+                    <p><strong>Specialization:</strong> Optics</p>
+                    <p><strong>GPA:</strong> 3.1</p>
+                    <p class="courses"><strong>Courses:</strong> Computational Physics, Laser Optics</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="content-section">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Research Assistant</h3>
+                        <p class="card-subtitle">The University of Arizona, Tucson, AZ</p>
+                        <ul>
+                            <li>Operate and manage Laser Doppler Vibrometer with Magneto-Optic Kerr Effect for precision measurement and characterization of acoustoelectric MEMS devices.</li>
+                            <li>Design/simulation of Acoustoelectric devices (Cavities, Transducers, Amplifiers).</li>
+                            <li>Investigated squeezed light for scalable quantum system experiments.</li>
+                            <li>Acoustics Driven Magnetic Resonance (ADMR) experiments for spintronics applications.</li>
+                            <li>Collaborated with Sandia National Laboratory for studying quantum acoustoelectric devices.</li>
+                            <li>Nano fabrication of MEMS devices and photonic waveguides.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">June 2024 - Aug 2024</div>
+                    <div class="timeline-content">
+                        <h3>Teaching Assistant</h3>
+                        <p class="card-subtitle">The University of Arizona, Tucson, AZ</p>
+                        <ul>
+                            <li>Conducted lectures and labs for Mechanics and Electronics courses.</li>
+                            <li>Improved student performance through interactive support.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Past</div> <div class="timeline-content">
+                        <h3>Cybersecurity Analyst</h3>
+                        <p class="card-subtitle">Positka FSI Solutions, Chennai, India</p>
+                        <ul>
+                            <li>Led incident response, reducing resolution time by 40%.</li>
+                            <li>Enhanced SIEM (Incident management) monitoring and developed security SOPs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="card-container">
+                <div class="card reveal">
+                    <h3>Photonic & Acoustoelectric devices</h3>
+                    <p class="card-subtitle">Sep 2022 - Sep 2023 | June 2024 - Present</p>
+                    <ul>
+                        <li>Involved in design, simulation and fabrication of Acousto-optic and Acoustoelectric devices used in RF microwave engineering applications.</li>
+                        <li>Built testbed to characterize on-chip magnetometers that uses MZMs with magneto-strictive films.</li>
+                        <li>Conducted experiments studying Acoustics Driven Magnetic Resonance (ADMR).</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <h3>Laser Doppler Vibrometer</h3>
+                    <p class="card-subtitle">May 2024 - Present</p>
+                    <ul>
+                        <li>Built an LDV which images the spatial displacement profile of micro/nano scale devices using confocal microscopy and interferometry.</li>
+                        <li>Associated with a vertical field electromagnet to conduct Magneto-Optic Kerr Effect measurements.</li>
+                        <li>Extended LDV operability to cryostat for quantum acoustoelectric devices used in phononic qubit control.</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <h3>Quantum Reservoir Computation</h3>
+                    <p class="card-subtitle">Jan 2024 - May 2024</p>
+                    <ul>
+                        <li>Built and Optimized a 100 MHz Balanced Homodyne Detector for squeezed light detection.</li>
+                        <li>Experiments included free space interferometry to accomplish phase locking and maximum detection capabilities.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         
+        <section id="skills" class="content-section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category reveal">
+                    <h4>Research</h4>
+                    <div class="skills-tags">
+                        <span>Quantum Optics</span>
+                        <span>Nonlinear Photonics</span>
+                        <span>Acoustoelectrics</span>
+                        <span>Imaging systems</span>
+                    </div>
+                </div>
+                 <div class="skill-category reveal">
+                    <h4>Technical</h4>
+                    <div class="skills-tags">
+                        <span>COMSOL</span>
+                        <span>MATLAB</span>
+                        <span>Python</span>
+                        <span>LaTeX</span>
+                        <span>GDS</span>
+                        <span>SOLIDWORKS</span>
+                        <span>SEM</span>
+                        <span>AFM</span>
+                        <span>Raman Spectroscopy</span>
+                        <span>Nanofabrication</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section>
-    <h2>About Me</h2>
-    <p>I am a highly motivated researcher in Optical Sciences and a Physics graduate with an integrated M.Sc. Currently pursuing a Masters in Optical Sciences, specializing in Quantum Information Science and Engineering. Deeply passionate about Quantum Computing technologies and dedicated to research in this transformative field. Eager to contribute to advancements and collaborate with fellow enthusiasts.</p>
-</section>
+    </main>
 
-<section>
-    <h2>Education</h2>
-    <p><strong>MS Optical Sciences</strong>, The University of Arizona, Tucson, AZ <br> GPA: 4.0 <br> Relevant Courses: Quantum Optics, Photonic Integrated Circuits, Acoustics Driven Magnetic Resonance</p>
-    <p><strong>Integrated M.Sc. Physics</strong>, Pondicherry University, India <br> CGPA: 7.52 <br> Relevant Courses: Computational Physics, Laser Optics</p>
-</section>
+    <footer class="footer">
+        <p>&copy; 2025 Mohanbabu Mani. All Rights Reserved.</p>
+    </footer>
 
-<section>
-    <h2>Experience</h2>
-    <ul class="experience-list">
-        <li><strong>Research Assistant</strong>, The University of Arizona <br> 
-            • Operated and managed Laser Doppler Vibrometer (LDV) for phononic and photonic device characterization.<br>
-            • Collaborated with Sandia National Labs on acoustoelectric quantum devices.
-        </li>
-        <li><strong>Cybersecurity Analyst</strong>, Positka FSI Solutions, Chennai, India <br>
-            • Led incident response, reducing resolution time by 40%.<br>
-            • Enhanced SIEM monitoring and developed security SOPs.
-        </li>
-    </ul>
-</section>
-
-<section>
-    <h2>Projects</h2>
-    <ul class="projects-list">
-        <li><strong>Phononic Device Characterization</strong> <br> 
-            • Characterized devices made from materials like Lithium Niobate on Silicon.
-        </li>
-        <li><strong>Quantum Reservoir Computing</strong> <br> 
-            • Optimized homodyne detectors for quantum optics experiments.
-        </li>
-    </ul>
-</section>
-
-<section>
-    <h2>Skills</h2>
-    <ul class="skills-list">
-        <li>Quantum Optics, Acousto-optomechanics, Open Quantum Systems</li>
-        <li>Python, COMSOL, MATLAB, GDS, SOLIDWORKS</li>
-        <li>SIEM Monitoring, Penetration Testing, Incident Response</li>
-        <li>Languages: English, French (DELF A1), German</li>
-    </ul>
-</section>
-
-<footer>
-    <p>© 2024 Mohanbabu Mani | Contact: mohanbabumani@arizona.edu</p>
-</footer>
-
+    <script src="script.js"></script>
+    <script>
+        feather.replace(); // To activate the icons
+    </script>
 </body>
 </html>
