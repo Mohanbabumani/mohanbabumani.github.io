@@ -17,11 +17,11 @@ function closeModal(modalId) {
     }
 }
 
-// Quiz Questions Data
+// Quiz Questions Data (Expanded List)
 const quizQuestions = [
-    // --- Fundamental Questions ---
+    // --- Fundamental Questions (7 total) ---
     {
-        question: "What phenomenon describes the bending of light as it passes from one medium to another, like air to water?",
+        question: "What phenomenon describes the bending of light as it passes from one medium to another?",
         answers: [
             { text: "Reflection", correct: false }, { text: "Diffraction", correct: false },
             { text: "Refraction", correct: true }, { text: "Dispersion", correct: false }
@@ -31,12 +31,20 @@ const quizQuestions = [
     {
         question: "For a light wave, what is the relationship between its wavelength (λ), frequency (f), and the speed of light (c)?",
         answers: [
-            { text: "c = λ / f", correct: false },
-            { text: "c = f / λ", correct: false },
-            { text: "c = λ * f", correct: true },
-            { text: "c = λ + f", correct: false }
+            { text: "c = λ / f", correct: false }, { text: "c = f / λ", correct: false },
+            { text: "c = λ * f", correct: true }, { text: "c = λ + f", correct: false }
         ],
         difficulty: "fundamental", source: "https://en.wikipedia.org/wiki/Speed_of_light"
+    },
+    {
+        question: "A lens that causes parallel light rays to spread apart is known as a:",
+        answers: [
+            { text: "Converging or Convex Lens", correct: false },
+            { text: "Plano-convex Lens", correct: false },
+            { text: "Diverging or Concave Lens", correct: true },
+            { text: "Fresnel Lens", correct: false }
+        ],
+        difficulty: "fundamental", source: "https://en.wikipedia.org/wiki/Lens_(optics)"
     },
     {
         question: "Snell's Law describes the relationship between the angles of incidence/refraction and what other property?",
@@ -49,12 +57,18 @@ const quizQuestions = [
     {
         question: "Which photoreceptor cells in the human eye are responsible for color vision?",
         answers: [
-            { text: "Rods", correct: false },
-            { text: "Cones", correct: true },
-            { text: "Ganglion cells", correct: false },
-            { text: "Bipolar cells", correct: false }
+            { text: "Rods", correct: false }, { text: "Cones", correct: true },
+            { text: "Ganglion cells", correct: false }, { text: "Bipolar cells", correct: false }
         ],
         difficulty: "fundamental", source: "https://en.wikipedia.org/wiki/Cone_cell"
+    },
+    {
+        question: "In the visible spectrum, which color of light has the longest wavelength?",
+        answers: [
+            { text: "Blue", correct: false }, { text: "Green", correct: false },
+            { text: "Yellow", correct: false }, { text: "Red", correct: true }
+        ],
+        difficulty: "fundamental", source: "https://en.wikipedia.org/wiki/Visible_spectrum"
     },
     {
         question: "Which of the following is a primary color of light in the additive color model (used in screens)?",
@@ -64,7 +78,7 @@ const quizQuestions = [
         ],
         difficulty: "fundamental", source: "https://en.wikipedia.org/wiki/Additive_color"
     },
-    // --- Intermediate Questions ---
+    // --- Intermediate Questions (7 total) ---
     {
         question: "Young's double-slit experiment is a classic demonstration of which wave property of light?",
         answers: [
@@ -76,12 +90,18 @@ const quizQuestions = [
     {
         question: "Why does the sky appear blue on a clear day?",
         answers: [
-            { text: "The atmosphere absorbs other colors", correct: false },
-            { text: "Due to thin-film interference", correct: false },
-            { text: "Rayleigh scattering of sunlight is stronger for shorter wavelengths", correct: true },
-            { text: "The Sun's light is naturally blue", correct: false }
+            { text: "The atmosphere absorbs other colors", correct: false }, { text: "Due to thin-film interference", correct: false },
+            { text: "Rayleigh scattering of sunlight is stronger for shorter wavelengths", correct: true }, { text: "The Sun's light is naturally blue", correct: false }
         ],
         difficulty: "intermediate", source: "https://en.wikipedia.org/wiki/Rayleigh_scattering"
+    },
+    {
+        question: "The minimum resolvable detail of an imaging system is fundamentally limited by:",
+        answers: [
+            { text: "The Pockels Effect", correct: false }, { text: "Chromatic Aberration", correct: false },
+            { text: "The Diffraction Limit", correct: true }, { text: "Spherical Aberration", correct: false }
+        ],
+        difficulty: "intermediate", source: "https://en.wikipedia.org/wiki/Diffraction-limited_system"
     },
     {
         question: "What property of a light wave is described by the orientation of its oscillations?",
@@ -94,12 +114,20 @@ const quizQuestions = [
     {
         question: "The iridescent colors seen on a soap bubble are caused by:",
         answers: [
-            { text: "Diffraction grating effects", correct: false },
-            { text: "Thin-film interference", correct: true },
-            { text: "Chromatic aberration", correct: false },
-            { text: "Rayleigh scattering", correct: false }
+            { text: "Diffraction grating effects", correct: false }, { text: "Thin-film interference", correct: true },
+            { text: "Chromatic aberration", correct: false }, { text: "Rayleigh scattering", correct: false }
         ],
         difficulty: "intermediate", source: "https://en.wikipedia.org/wiki/Thin-film_interference"
+    },
+    {
+        question: "An optical component that consists of two parallel, partially reflecting surfaces is known as:",
+        answers: [
+            { text: "A Michelson Interferometer", correct: false },
+            { text: "A Diffraction Grating", correct: false },
+            { text: "A Fabry-Pérot Interferometer", correct: true },
+            { text: "A Wollaston Prism", correct: false }
+        ],
+        difficulty: "intermediate", source: "https://en.wikipedia.org/wiki/Fabry%E2%80%93P%C3%A9rot_interferometer"
     },
     {
         question: "The separation of white light into its constituent colors by a prism is known as:",
@@ -109,7 +137,7 @@ const quizQuestions = [
         ],
         difficulty: "intermediate", source: "https://en.wikipedia.org/wiki/Dispersion_(optics)"
     },
-    // --- Advanced Questions ---
+    // --- Advanced Questions (7 total) ---
     {
         question: "Which of these concepts is fundamental to the operation of a laser?",
         answers: [
@@ -121,12 +149,20 @@ const quizQuestions = [
     {
         question: "A 'squeezed state' of light is a quantum state where the uncertainty of one quadrature is reduced below what limit?",
         answers: [
-            { text: "The Heisenberg Uncertainty Limit", correct: false },
-            { text: "The Standard Quantum Limit (SQL)", correct: true },
-            { text: "The Diffraction Limit", correct: false },
-            { text: "The Planck Limit", correct: false }
+            { text: "The Heisenberg Uncertainty Limit", correct: false }, { text: "The Standard Quantum Limit (SQL)", correct: true },
+            { text: "The Diffraction Limit", correct: false }, { text: "The Planck Limit", correct: false }
         ],
         difficulty: "advanced", source: "https://en.wikipedia.org/wiki/Squeezed_coherent_state"
+    },
+    {
+        question: "The Pockels effect describes a change in a material's refractive index that is ______ to an applied electric field.",
+        answers: [
+            { text: "Proportional (Linear)", correct: true },
+            { text: "Proportional to the square (Quadratic)", correct: false },
+            { text: "Inversely Proportional", correct: false },
+            { text: "Unrelated", correct: false }
+        ],
+        difficulty: "advanced", source: "https://en.wikipedia.org/wiki/Pockels_effect"
     },
     {
         question: "The photoelectric effect, explained by Einstein, demonstrates what quantum property of light?",
@@ -137,12 +173,18 @@ const quizQuestions = [
         difficulty: "advanced", source: "https://en.wikipedia.org/wiki/Photoelectric_effect"
     },
     {
+        question: "A Bell state is a maximally ______ two-qubit quantum state.",
+        answers: [
+            { text: "Entangled", correct: true }, { text: "Coherent", correct: false },
+            { text: "Squeezed", correct: false }, { text: "Polarized", correct: false }
+        ],
+        difficulty: "advanced", source: "https://en.wikipedia.org/wiki/Bell_state"
+    },
+    {
         question: "In an acousto-optic modulator (AOM), how is the frequency of the diffracted light beam shifted?",
         answers: [
-            { text: "By the Doppler shift from the traveling acoustic wave", correct: true },
-            { text: "By changing the refractive index with an electric field", correct: false },
-            { text: "By rotating a polarization filter", correct: false },
-            { text: "By stimulated emission in the crystal", correct: false }
+            { text: "By the Doppler shift from the traveling acoustic wave", correct: true }, { text: "By changing the refractive index with an electric field", correct: false },
+            { text: "By rotating a polarization filter", correct: false }, { text: "By stimulated emission in the crystal", correct: false }
         ],
         difficulty: "advanced", source: "https://en.wikipedia.org/wiki/Acousto-optic_modulator"
     },
@@ -156,19 +198,17 @@ const quizQuestions = [
     }
 ];
 
-// Quiz state variables
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let incorrectAnswers = [];
 
-// Quiz Functions
 function startQuiz(difficulty) {
     const quizStartScreen = document.getElementById('quiz-start-screen');
     const quizQuestionScreen = document.getElementById('quiz-question-screen');
     const quizResultsScreen = document.getElementById('quiz-results-screen');
 
-    currentQuestions = quizQuestions.filter(q => q.difficulty === difficulty).sort(() => Math.random() - 0.5).slice(0, 3);
+    currentQuestions = quizQuestions.filter(q => q.difficulty === difficulty).sort(() => Math.random() - 0.5).slice(0, 5); // Now selects 5 questions
     currentQuestionIndex = 0;
     score = 0;
     incorrectAnswers = [];
@@ -240,7 +280,7 @@ function showResults() {
     const reviewContainer = document.getElementById('incorrect-answers-review');
     reviewContainer.innerHTML = '<h4>Review your incorrect answers:</h4>';
     if (incorrectAnswers.length === 0) {
-        reviewContainer.innerHTML += "<p>Great job! You got all the questions right.</p>";
+        reviewContainer.innerHTML += "<p>Excellent! You got all the questions right.</p>";
     } else {
         incorrectAnswers.forEach(item => {
             const correctAnswer = item.question.answers.find(a => a.correct).text;
@@ -258,6 +298,7 @@ function showResults() {
 }
 
 function resetQuiz() {
+    document.getElementById('quiz-question-screen').style.display = 'none';
     document.getElementById('quiz-results-screen').style.display = 'none';
     document.getElementById('quiz-start-screen').style.display = 'block';
 }
@@ -326,6 +367,9 @@ document.addEventListener('DOMContentLoaded', () => {
             showResults();
         }
     });
+
+    // NEW: Add event listener for the exit button
+    document.getElementById('exit-quiz-btn').addEventListener('click', resetQuiz);
 });
 
 window.onclick = function(event) {
