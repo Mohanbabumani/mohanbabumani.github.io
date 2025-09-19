@@ -191,3 +191,29 @@ body.modal-open { overflow: hidden; }
     .hero-subtitle { font-size: 1.2rem; height: 4rem; }
     .content-section { padding: 4rem 1rem; }
 }
+
+
+#quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.quiz-exit-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 0.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.quiz-exit-btn:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
