@@ -35,6 +35,7 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#repositories" class="nav-link">Repositories</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#quiz" class="nav-link">Quiz</a></li>
             </ul>
         </div>
     </nav>
@@ -187,6 +188,38 @@
                 </div>
             </div>
         </section>
+
+        <section id="quiz" class="content-section">
+            <h2 class="section-title">Optics Quiz</h2>
+            <div id="quiz-container" class="card reveal">
+                <div id="quiz-start-screen">
+                    <p>Test your knowledge of optical sciences. Select a difficulty to begin.</p>
+                    <div class="difficulty-buttons">
+                        <button class="quiz-btn" onclick="startQuiz('fundamental')">Fundamentals</button>
+                        <button class="quiz-btn" onclick="startQuiz('intermediate')">Intermediate</button>
+                        <button class="quiz-btn" onclick="startQuiz('advanced')">Advanced</button>
+                    </div>
+                </div>
+                <div id="quiz-question-screen" style="display: none;">
+                    <div id="quiz-header">
+                        <p id="question-counter"></p>
+                    </div>
+                    <p id="question-text"></p>
+                    <div id="answer-buttons" class="answer-grid">
+                        </div>
+                    <button id="next-btn" class="quiz-btn" style="display: none;">Next</button>
+                </div>
+                <div id="quiz-results-screen" style="display: none;">
+                    <h3>Quiz Complete!</h3>
+                    <p>Your Score: <span id="score-text"></span></p>
+                    <div id="incorrect-answers-review">
+                        <h4>Review your incorrect answers:</h4>
+                        </div>
+                    <button class="quiz-btn" onclick="resetQuiz()">Try Again</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -237,8 +270,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
