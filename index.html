@@ -196,10 +196,12 @@
                 <div id="quiz-start-screen">
                     <p>Test your knowledge of optical sciences. Select a difficulty to begin.</p>
                     <div class="difficulty-buttons">
-                        <button id="start-fundamental-btn" class="quiz-btn">Fundamentals</button>
-                        <button id="start-intermediate-btn" class="quiz-btn">Intermediate</button>
-                        <button id="start-advanced-btn" class="quiz-btn">Advanced</button>
+                        <button class="quiz-btn" onclick="startQuiz('fundamental')">Fundamentals</button>
+                        <button class="quiz-btn" onclick="startQuiz('intermediate')">Intermediate</button>
+                        <button class="quiz-btn" onclick="startQuiz('advanced')">Advanced</button>
                     </div>
+                </div>
+                </div>
                 </div>
                 <div id="quiz-question-screen" style="display: none;">
                     <div id="quiz-header">
@@ -270,4 +272,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
