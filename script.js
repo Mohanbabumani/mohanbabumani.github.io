@@ -19,6 +19,7 @@ function closeModal(modalId) {
 
 // Quiz Questions Data
 const quizQuestions = [
+    // --- Fundamental Questions ---
     {
         question: "What phenomenon describes the bending of light as it passes from one medium to another, like air to water?",
         answers: [
@@ -26,6 +27,16 @@ const quizQuestions = [
             { text: "Refraction", correct: true }, { text: "Dispersion", correct: false }
         ],
         difficulty: "fundamental", source: "https://en.wikipedia.org/wiki/Refraction"
+    },
+    {
+        question: "For a light wave, what is the relationship between its wavelength (λ), frequency (f), and the speed of light (c)?",
+        answers: [
+            { text: "c = λ / f", correct: false },
+            { text: "c = f / λ", correct: false },
+            { text: "c = λ * f", correct: true },
+            { text: "c = λ + f", correct: false }
+        ],
+        difficulty: "fundamental", source: "https://en.wikipedia.org/wiki/Speed_of_light"
     },
     {
         question: "Snell's Law describes the relationship between the angles of incidence/refraction and what other property?",
@@ -36,6 +47,16 @@ const quizQuestions = [
         difficulty: "fundamental", source: "https://en.wikipedia.org/wiki/Snell%27s_law"
     },
     {
+        question: "Which photoreceptor cells in the human eye are responsible for color vision?",
+        answers: [
+            { text: "Rods", correct: false },
+            { text: "Cones", correct: true },
+            { text: "Ganglion cells", correct: false },
+            { text: "Bipolar cells", correct: false }
+        ],
+        difficulty: "fundamental", source: "https://en.wikipedia.org/wiki/Cone_cell"
+    },
+    {
         question: "Which of the following is a primary color of light in the additive color model (used in screens)?",
         answers: [
             { text: "Yellow", correct: false }, { text: "Green", correct: true },
@@ -43,6 +64,7 @@ const quizQuestions = [
         ],
         difficulty: "fundamental", source: "https://en.wikipedia.org/wiki/Additive_color"
     },
+    // --- Intermediate Questions ---
     {
         question: "Young's double-slit experiment is a classic demonstration of which wave property of light?",
         answers: [
@@ -50,6 +72,16 @@ const quizQuestions = [
             { text: "Interference", correct: true }, { text: "Refraction", correct: false }
         ],
         difficulty: "intermediate", source: "https://en.wikipedia.org/wiki/Young%27s_double-slit_experiment"
+    },
+    {
+        question: "Why does the sky appear blue on a clear day?",
+        answers: [
+            { text: "The atmosphere absorbs other colors", correct: false },
+            { text: "Due to thin-film interference", correct: false },
+            { text: "Rayleigh scattering of sunlight is stronger for shorter wavelengths", correct: true },
+            { text: "The Sun's light is naturally blue", correct: false }
+        ],
+        difficulty: "intermediate", source: "https://en.wikipedia.org/wiki/Rayleigh_scattering"
     },
     {
         question: "What property of a light wave is described by the orientation of its oscillations?",
@@ -60,6 +92,16 @@ const quizQuestions = [
         difficulty: "intermediate", source: "https://en.wikipedia.org/wiki/Polarization_(waves)"
     },
     {
+        question: "The iridescent colors seen on a soap bubble are caused by:",
+        answers: [
+            { text: "Diffraction grating effects", correct: false },
+            { text: "Thin-film interference", correct: true },
+            { text: "Chromatic aberration", correct: false },
+            { text: "Rayleigh scattering", correct: false }
+        ],
+        difficulty: "intermediate", source: "https://en.wikipedia.org/wiki/Thin-film_interference"
+    },
+    {
         question: "The separation of white light into its constituent colors by a prism is known as:",
         answers: [
             { text: "Diffraction", correct: false }, { text: "Dispersion", correct: true },
@@ -67,6 +109,7 @@ const quizQuestions = [
         ],
         difficulty: "intermediate", source: "https://en.wikipedia.org/wiki/Dispersion_(optics)"
     },
+    // --- Advanced Questions ---
     {
         question: "Which of these concepts is fundamental to the operation of a laser?",
         answers: [
@@ -76,12 +119,32 @@ const quizQuestions = [
         difficulty: "advanced", source: "https://en.wikipedia.org/wiki/Stimulated_emission"
     },
     {
+        question: "A 'squeezed state' of light is a quantum state where the uncertainty of one quadrature is reduced below what limit?",
+        answers: [
+            { text: "The Heisenberg Uncertainty Limit", correct: false },
+            { text: "The Standard Quantum Limit (SQL)", correct: true },
+            { text: "The Diffraction Limit", correct: false },
+            { text: "The Planck Limit", correct: false }
+        ],
+        difficulty: "advanced", source: "https://en.wikipedia.org/wiki/Squeezed_coherent_state"
+    },
+    {
         question: "The photoelectric effect, explained by Einstein, demonstrates what quantum property of light?",
         answers: [
             { text: "It behaves only as a wave", correct: false }, { text: "It is composed of particles (photons)", correct: true },
             { text: "Its speed is variable in a vacuum", correct: false }, { text: "It cannot be polarized", correct: false }
         ],
         difficulty: "advanced", source: "https://en.wikipedia.org/wiki/Photoelectric_effect"
+    },
+    {
+        question: "In an acousto-optic modulator (AOM), how is the frequency of the diffracted light beam shifted?",
+        answers: [
+            { text: "By the Doppler shift from the traveling acoustic wave", correct: true },
+            { text: "By changing the refractive index with an electric field", correct: false },
+            { text: "By rotating a polarization filter", correct: false },
+            { text: "By stimulated emission in the crystal", correct: false }
+        ],
+        difficulty: "advanced", source: "https://en.wikipedia.org/wiki/Acousto-optic_modulator"
     },
     {
         question: "In non-linear optics, what is the process where two photons create a new photon with twice the frequency?",
@@ -202,10 +265,8 @@ function resetQuiz() {
 
 // --- EVENT LISTENERS & INITIALIZATIONS ---
 
-// This listener handles things that MUST run after the page is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Typing animation
     new Typed('#typed-subtitle', {
         strings: ['PhD Candidate in Optical Sciences', 'Quantum Information Engineering', 'Acoustoelectric Device Researcher'],
         typeSpeed: 50,
@@ -214,7 +275,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loop: true
     });
 
-    // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -224,7 +284,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Active Nav Link Highlighting
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
     const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
@@ -242,7 +301,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
     sections.forEach(section => { sectionObserver.observe(section); });
     
-    // Fade-in Animations on Scroll
     const revealElements = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -254,14 +312,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1 });
     revealElements.forEach(element => { revealObserver.observe(element); });
 
-    // Particles.js Background
     particlesJS('particles-js', {
       "particles": { "number": { "value": 60, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#00f2ea" }, "shape": { "type": "circle" }, "opacity": { "value": 0.5, "random": false }, "size": { "value": 3, "random": true }, "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 }, "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false } },
       "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } } },
       "retina_detect": true
     });
 
-    // Quiz 'Next' button listener
     document.getElementById('next-btn').addEventListener('click', () => {
         currentQuestionIndex++;
         if (currentQuestionIndex < currentQuestions.length) {
@@ -272,7 +328,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Global event listeners for modals
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         closeModal(event.target.id);
